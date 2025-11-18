@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Plano de Estudos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Classificador de Plano de Estudos</h1>
+    <h3>Quer descobrir quais conteúdos estudar de acordo com seu perfil? Preencha as informações abaixo e receba uma recomendação personalizada do seu plano de estudos. Organizar sua rotina de estudos nunca foi tão fácil</h3>
+
+    <form id="formPlano">
+
+        <label>Qual seu nome?</label>
+        <input type="text" id="nome" required>
+
+        <label>Quantos anos você tem?</label>
+        <input type="number" id="idade" min="10" max="120" required>
+
+        <label>Em qual semestre você se encontra? (1–10)</label>
+        <select id="semestre" required></select>
+
+        <label>Quanto tempo você tem para estudar por dia?</label>
+        <select id="tempo" required>
+            <option value="">Selecione</option>
+            <option>30min - 1h</option>
+            <option>1h - 1h30</option>
+            <option>1h30 - 2h</option>
+            <option>2h30 - 3h</option>
+            <option>+3h</option>
+        </select>
+
+        <label>Qual o seu conteúdo de preferência?</label>
+        <select id="preferencia" required>
+            <option value="">Selecione</option>
+            <option>Programação</option>
+            <option>Web</option>
+            <option>Algoritimos</option>
+            <option>Estrutura de dados</option>
+            <option>Backend</option>
+            <option>Frontend</option>
+            <option>Fullstack</option>
+            <option>Database</option>
+        </select>
+
+        <label>Com qual nível você mais se identifica?</label>
+        <select id="nivel" required>
+            <option value="">Selecione</option>
+            <option>Iniciante</option>
+            <option>Intermediário</option>
+            <option>Avançado</option>
+        </select>
+
+        <button type="submit">Gerar Meu Plano de Estudos</button>
+    </form>
+
+    <div id="resultado"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
